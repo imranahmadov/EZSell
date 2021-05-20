@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <title>EZSell - Checkout</title>
+</head>
+
+<body>
+    <!-- HEADER START -->
+    <header>
+        <div id="header-top">
+            <div class="container">
+                <div class="top-nav row d-flex justify-content-center justify-content-lg-between">
+                    <div class="row d-flex m-0 justify-content-center">
+                        <div class="row d-flex m-0 justify-content-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                <a class="top-nav-link" href="tel:+994(012)4442633">+994(012) 444 26 33</a>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="far fa-envelope" aria-hidden="true"></i>
+                                <a class="top-nav-link" href="mailto:email@ezsell.az">email@ezsell.az</a>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <a class="top-nav-link"
+                                    href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455"
+                                    target="_blank">Nizami küçəsi 203B</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="far fa-user" aria-hidden="true"></i>
+                            <a class="top-nav-link" href="#">
+                                <p>My Account</p>
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+                            <div>
+                                <select class="" id="select-currency">
+                                    <option value="0" selected="selected">USD</option>
+                                    <option value="1">AZN</option>
+                                    <option value="1">EURO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-ad-btn-div pt-2 pb-1 d-flex align-items-center col-10 col-lg-3">
+                        <a class="create-ad-btn d-flex align-items-center justify-content-center" href="#">
+                            Create your ad
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="header-low">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex align-items-center justify-content-lg-start justify-content-center col-lg-3">
+                        <a href="#"><img src="img/ez-sell-logo-xs.png" alt=""></a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center col-lg-6 main-search-bar">
+                        <form class="search-items d-flex justify-content-center">
+                            <select class="input-select" id="select-category">
+                                <option value="0">All Categories</option>
+                                <option value="1">Category 01</option>
+                                <option value="2">Category 02</option>
+                            </select>
+                            <input class="input" id="item-search-input" placeholder="Search items">
+                            <button class="search-btn">Search</button>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-end col-lg-3" id="cart-and-wishlist">
+                        <a href="#">
+                            <div class="nav-side-btn" id="wishlist-btn">
+                                <div class="d-flex align-items-center justify-content-center wishlist-bar">
+                                    <i class="far fa-heart"></i>
+                                    <div class="d-flex justify-content-center qty" id="wishlist-qty">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <p>Your Wishlist</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="nav-side-btn" id="cart-btn">
+                                <div class="d-flex align-items-center justify-content-center cart-bar">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <div class="d-flex justify-content-center qty" id="cart-item-qty">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <p>Your Cart</p>
+                            </div>
+                        </a>
+                        <div class="menu-toggle d-flex d-lg-none">
+                            <a class="d-flex flex-column align-items-center" href="#">
+                                <i class="fa fa-bars"></i>
+                                <span>Menu</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+    <!-- NAVBAR START-->
+    <nav>
+        <div class="container responsive-nav">
+            <ul class="d-lg-flex nav-section">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Hot Deals</a>
+                </li>
+                <li>
+                    <a href="#">Categories</a>
+                </li>
+                <li>
+                    <a href="#">Laptops</a>
+                </li>
+                <li>
+                    <a href="#">Smartphones</a>
+                </li>
+                <li> <a href="#">Cameras</a>
+                </li>
+                <li>
+                    <a href="#">Accessories</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- NAVBAR END-->
+    <!-- MAIN START -->
+    <main>
+        <!-- CHECKOUT DETAILS START -->
+        <section class="checkout-details container">
+            <div class="row">
+                <div class="form-section col-md-7">
+                    <div class="billing-details">
+                        <div class="section-title">
+                            <h3 class="title">Billing Address</h3>
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" name="first-name" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" name="last-name" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" name="address" placeholder="Address">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" name="city" placeholder="City">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" name="country" placeholder="Country">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" name="zip-code" placeholder="ZIP Code">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="tel" name="tel-number" placeholder="Telephone">
+                        </div>
+                        <div class="form-group">
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="create-account">
+                                <span class="checkbox-text">Create Account?</span>
+                                <div class="caption pt-2">
+                                    <input class="input mb-3" type="password" name="password"
+                                        placeholder="Enter Your Password">
+                                    <input class="input mb-3" type="password" name="confirm-password"
+                                        placeholder="Confirm Your Password">
+                                    <input type="checkbox" id="show-password">
+                                    <span class="checkbox-text">Show Password</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shipping-details">
+                        <div class="section-title">
+                            <h3 class="title">Shipping Address</h3>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="ship-to-different-address">
+                                <span class="checkbox-text">Ship to a diffrent address?</span>
+                                <div class="caption pt-2">
+                                    <div class="form-group">
+                                        <input class="input" type="text" name="first-name" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="input" type="text" name="last-name" placeholder="Last Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="input" type="text" name="email" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="input" type="text" name="address" placeholder="Address">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="input" type="text" name="city" placeholder="City">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="input" type="text" name="country" placeholder="Country">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="input" type="text" name="zip-code" placeholder="ZIP Code">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="input" type="tel" name="tel-number" placeholder="Telephone">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-notes">
+                        <textarea class="input" placeholder="Order Notes"></textarea>
+                    </div>
+                </div>
+                <div class="order-details col-md-5">
+                    <div class="section-title text-center">
+                        <h3 class="title">Your Order</h3>
+                    </div>
+                    <div class="order-summary">
+                        <table>
+                            <tr>
+                                <th class="first-elem">Product</th>
+                                <th class="last-elem">Total</th>
+                            </tr>
+                            <tr>
+                                <td class="first-elem">1x Product Name Goes Here</td>
+                                <td class="last-elem">$980.00</td>
+                            </tr>
+                            <tr>
+                                <td class="first-elem">2x Product Name Goes Here</td>
+                                <td class="last-elem">$980.00</td>
+                            </tr>
+                            <tr>
+                                <td class="first-elem">Shipping</td>
+                                <td class="last-elem shipping-cost">Free</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="first-elem total-cost-text">Total</p>
+                                </td>
+                                <td>
+                                    <h3 class="last-elem total-cost">$2940.00</h3>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="payment-method">
+                        <div class="input-radio">
+                            <input type="radio" name="payment" id="payment-1">
+                            <label for="payment-1">
+                                Direct Bank Transfer
+                            </label>
+                            <div class="caption">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et
+                                    dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                        <div class="input-radio">
+                            <input type="radio" name="payment" id="payment-2">
+                            <label for="payment-2">
+                                Cheque Payment
+                            </label>
+                            <div class="caption">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et
+                                    dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                        <div class="input-radio">
+                            <input type="radio" name="payment" id="payment-3">
+                            <label for="payment-3">
+                                Paypal System
+                            </label>
+                            <div class="caption">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et
+                                    dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-checkbox d-flex">
+                        <input type="checkbox" id="confirm-term-and-conditions">
+                        <p class="checkbox-text">I've read and accept the <a class="terms-and-conditions" href="#">terms
+                                &
+                                conditions</a></p>
+                    </div>
+                    <a href="#" class="place-order-btn">Place order</a>
+                </div>
+            </div>
+        </section>
+        <!-- CHECKOUT DETAILS END -->
+    </main>
+    <!-- MAIN END -->
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content col-md-12 d-flex flex-column align-items-center">
+                <p>Sign Up for the <span>NEWSLETTER</span></p>
+                <div class="newsletter-input-subs d-flex justify-content-center">
+                    <form action="" class="d-flex justify-content-center">
+                        <input class="newsletter-input" type="text" placeholder="Enter Your Email">
+                        <button class="subscribe-btn d-flex justify-content-between align-items-center">
+                            <i class="fa fa-envelope"></i>
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+                <div class="social-links-nav">
+                    <ul class="social-link-list d-flex">
+                        <li>
+                            <a class="social-link d-flex align-items-center justify-content-center" href="">
+                                <i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a class="social-link d-flex align-items-center justify-content-center" href="">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link d-flex align-items-center justify-content-center" href="">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link d-flex align-items-center justify-content-center" href="">
+                                <i class="fa fa-pinterest"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /NEWSLETTER -->
+    <!-- FOOTER-START -->
+    <footer>
+        <div id="upper-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>ABOUT US</h6>
+                        <ul>
+                            <li>
+                                <a href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455 "
+                                    target="_blank " class="d-flex ">
+                                    <i class="fas fa-map-marker-alt "></i>
+                                    <p>Nizami küçəsi 203B</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+994(012)4442633 " class="d-flex ">
+                                    <i class="fas fa-phone-alt "></i>
+                                    <p>+994(012) 444 26 33</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:email@ezsell.az " class="d-flex ">
+                                    <i class="far fa-envelope "></i>
+                                    <p>email@ezsell.az</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>CATEGORIES</h6>
+                        <ul>
+                            <li>
+                                <a href=" ">Hot deals</a>
+                            </li>
+                            <li>
+                                <a href=" ">Laptops</a>
+                            </li>
+                            <li>
+                                <a href=" ">Smartphones</a>
+                            </li>
+                            <li>
+                                <a href=" ">Cameras</a>
+                            </li>
+                            <li>
+                                <a href=" ">Accessories</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>INFORMATION</h6>
+                        <ul>
+                            <li>
+                                <a href=" ">About Us</a>
+                            </li>
+                            <li>
+                                <a href=" ">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href=" ">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href=" ">Orders and Returns</a>
+                            </li>
+                            <li>
+                                <a href=" ">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>SERVICE</h6>
+                        <ul>
+                            <li>
+                                <a href=" ">My Account</a>
+                            </li>
+                            <li>
+                                <a href=" ">View Cart</a>
+                            </li>
+                            <li>
+                                <a href=" ">Wishlist</a>
+                            </li>
+                            <li>
+                                <a href=" ">Track My Order</a>
+                            </li>
+                            <li>
+                                <a href=" ">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lower-footer">
+            <div class="container d-flex justify-content-center ">
+                <div class="d-flex flex-column justify-content-center ">
+                    <ul class="d-flex p-0 justify-content-center ">
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-visa "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <i class="fa fa-credit-card "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <i class="fa fa-cc-paypal "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-mastercard "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-discover "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-amex "></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>Copyright ©2020 All rights reserved | This web application is made by
+                        <a id="project-author " href="https://www.linkedin.com/in/imran-ahmadov-705039144/ " target="_blank"
+                            style="text-decoration:none"><span>Imran Ahmadov</span></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+    <script src="js/checkout.js"></script>
+    <script src="https://kit.fontawesome.com/6c10cc7e6e.js " crossorigin="anonymous "></script>
+</body>
+
+</html>

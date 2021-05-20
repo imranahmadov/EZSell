@@ -1,0 +1,14 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.bg-main {
+  width: 100%;
+}
+.bg-main img {
+  width: 100%;
+  filter: blur(6px);
+}
+section {
+  z-index: 100;
+  position: absolute;
+}

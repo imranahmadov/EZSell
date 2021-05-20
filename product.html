@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZSell - Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER START -->
+    <header>
+        <div id="header-top">
+            <div class="container">
+                <div class="top-nav row d-flex justify-content-center justify-content-lg-between">
+                    <div class="row d-flex m-0 justify-content-center">
+                        <div class="row d-flex m-0 justify-content-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                <a class="top-nav-link" href="tel:+994(012)4442633">+994(012) 444 26 33</a>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="far fa-envelope" aria-hidden="true"></i>
+                                <a class="top-nav-link" href="mailto:email@ezsell.az">email@ezsell.az</a>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <a class="top-nav-link"
+                                    href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455"
+                                    target="_blank">Nizami küçəsi 203B</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="far fa-user" aria-hidden="true"></i>
+                            <a class="top-nav-link" href="#">
+                                <p>My Account</p>
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+                            <div>
+                                <select class="" id="select-currency">
+                                    <option value="0" selected="selected">USD</option>
+                                    <option value="1">AZN</option>
+                                    <option value="1">EURO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-ad-btn-div pt-2 pb-1 d-flex align-items-center col-10 col-lg-3">
+                        <a class="create-ad-btn d-flex align-items-center justify-content-center" href="#">
+                            Create your ad
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="header-low">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex align-items-center justify-content-lg-start justify-content-center col-lg-3">
+                        <a href="#"><img src="img/ez-sell-logo-xs.png" alt=""></a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center col-lg-6 main-search-bar">
+                        <form class="search-items d-flex justify-content-center">
+                            <select class="input-select" id="select-category">
+                                <option value="0">All Categories</option>
+                                <option value="1">Category 01</option>
+                                <option value="2">Category 02</option>
+                            </select>
+                            <input class="input" id="item-search-input" placeholder="Search items">
+                            <button class="search-btn">Search</button>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-end col-lg-3" id="cart-and-wishlist">
+                        <a href="#">
+                            <div class="nav-side-btn" id="wishlist-btn">
+                                <div class="d-flex align-items-center justify-content-center wishlist-bar">
+                                    <i class="far fa-heart"></i>
+                                    <div class="d-flex justify-content-center qty" id="wishlist-qty">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <p>Your Wishlist</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="nav-side-btn" id="cart-btn">
+                                <div class="d-flex align-items-center justify-content-center cart-bar">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <div class="d-flex justify-content-center qty" id="cart-item-qty">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <p>Your Cart</p>
+                            </div>
+                        </a>
+                        <div class="menu-toggle d-flex d-lg-none">
+                            <a class="d-flex flex-column align-items-center" href="#">
+                                <i class="fa fa-bars"></i>
+                                <span>Menu</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+    <!-- NAVBAR START-->
+    <nav>
+        <div class="container responsive-nav">
+            <ul class="d-lg-flex nav-section">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Hot Deals</a>
+                </li>
+                <li>
+                    <a href="#">Categories</a>
+                </li>
+                <li>
+                    <a href="#">Laptops</a>
+                </li>
+                <li>
+                    <a href="#">Smartphones</a>
+                </li>
+                <li> <a href="#">Cameras</a>
+                </li>
+                <li>
+                    <a href="#">Accessories</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- NAVBAR END-->
+    <!-- MAIN START -->
+    <main>
+        <!-- BREADCRUMB START -->
+        <div class="breadcrumb-section" aria-label="breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#">HOME</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">ALL CATEGORIES</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">ACCESSORIES</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">HEADPHONES</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <a href="#">Razer Deathadder Elite Gaming Mouse</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!-- BREADCRUMB END -->
+        <!-- PRODUCT INFO START -->
+        <section class="product-info">
+            <div class="container">
+                <div class="pt-3 row d-flex justify-content-center justify-content-lg-start">
+                    <div
+                        class="product-images d-flex flex-column flex-lg-row-reverse align-items-center align-items-lg-start col-lg-6 col-12">
+                        <div class="magnified-image mb-3 ml-2 d-flex align-items-center justify-content-center"
+                            id="magnifierDiv">
+                            <img class="active-image" src="img/razer1.jpg" alt="" data-id="1">
+                            <img src="img/razer2.jpg" alt="" data-id="2">
+                            <img src="img/razer3.jpg" alt="" data-id="3">
+                            <img src="img/razer4.jpg" alt="" data-id="4">
+                            <img src="img/razer5.jpg" alt="" data-id="5">
+                        </div>
+                        <div class="thumbnail-images">
+                            <ul class="d-flex flex-lg-column">
+                                <li class="thumbnail-image d-flex align-items-center justify-content-center"
+                                    data-id="1">
+                                    <img src="img/razer1.jpg" alt="">
+                                </li>
+                                <li class="thumbnail-image d-flex align-items-center justify-content-center"
+                                    data-id="2">
+                                    <img src="img/razer2.jpg" alt="">
+                                </li>
+                                <li class="thumbnail-image d-flex align-items-center justify-content-center"
+                                    data-id="3">
+                                    <img src="img/razer3.jpg" alt="">
+                                </li>
+                                <li class="thumbnail-image d-flex align-items-center justify-content-center"
+                                    data-id="4">
+                                    <img src="img/razer4.jpg" alt="">
+                                </li>
+                                <li class="thumbnail-image d-flex align-items-center justify-content-center"
+                                    data-id="5">
+                                    <img src="img/razer5.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main-product-info col-lg-6 col-12">
+                        <h2 class="product-name">Razer Deathadder Elite Gaming Mouse</h2>
+                        <span>Sold by <a href="">Razer</a></span>
+                        <div class="review-div d-flex">
+                            <div class="review-rating">
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fa fa-star-o void-rating-star"></i>
+                            </div>
+                            <div class="reviews-link ml-3">
+                                <a href="#product-rev-div">10 Review(s) | Add your review</a>
+                            </div>
+                        </div>
+                        <div class="product-price-and-status">
+                            <h3>$980.00<del class="ml-2">$990.00</del></h3>
+                            <span class="product-stock-status">In Stock</span>
+                        </div>
+                        <ul class="product-about-info m-0">
+                            <li>Gaming mouse with one of the world's enhanced optical sensor with true 16000 DPI,
+                                450
+                                IPS and 99 4 percent resolution
+                                accuracy</li>
+                            <li>Gaming optimised razer mechanical mouse switches durable up to 50 million clicks
+                            </li>
+                            <li>Ergonomic form factor has been tested and validated by top esports athletes</li>
+                            <li>Gaming grade tactile scroll wheel for high control</li>
+                            <li>DPI buttons at your fingertips and razer chroma customisable lighting</li>
+                        </ul>
+                        <div class="qty-label d-flex align-items-center mt-4 mb-4">
+                            QTY
+                            <div class="input-number ml-2 mr-3">
+                                <input class="qty-input" type="number">
+                                <span class="qty-up">+</span>
+                                <span class="qty-down">-</span>
+                            </div>
+                            <button class="product-add-to-cart d-flex align-items-center">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <p class="d-flex">ADD TO CART</p>
+                            </button>
+                        </div>
+                        <div class="d-flex flex-column align-items-start">
+                            <button
+                                class="product-add-to-wishlist p-0 d-flex justify-content-center align-items-center">
+                                <i class="fa fa-heart-o mr-1"></i>
+                                <p>Add To Wishlist</p>
+                            </button>
+                            <a class="share-on-facebook" href="https://www.facebook.com/sharer/sharer.php?u=ezsell.az"
+                                target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                                Share on Facebook
+                            </a>
+                            <a class="share-on-twitter"
+                                href="https://twitter.com/intent/tweet?text=There%20are%20some%20things%20you%20can%E2%80%99t%20sell.%20For%20everything%20else%2C%20there%E2%80%99s%20EZSell!&url=http%3A%2F%2Fezsell.az&hashtags=selleasywithezsell%2Cezsell"
+                                target="_blank">
+                                <i class="fab fa-twitter"></i>
+                                Share on Twitter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PRODUCT INFO END -->
+        <!-- PRODUCT TAB START -->
+        <section class="product-tab">
+            <div class="container">
+                <div class="section-nav mb-2 d-flex justify-content-center align-items-center">
+                    <ul class="d-flex nav-section" id="navSection">
+                        <li class="active">
+                            <a href="#">Description</a>
+                        </li>
+                        <li>
+                            <a href="#">Details</a>
+                        </li>
+                        <li>
+                            <a href="#" id="review-navlink">Reviews(3)</a>
+                        </li>
+                    </ul>
+                    <div class="container nav-section-underline">
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="product-description hidden active-content">
+                        <p>Equipped with the new esports-grade optical sensor that has true 16,000 DPI and true tracking
+                            at 450 Inches Per
+                            Second (IPS), the Razer DeathAdder Elite gives you the absolute advantage of having the
+                            fastest sensor in the
+                            world. Engineered to redefine the standards of accuracy and speed, this incredible mouse
+                            sensor crushes the
+                            competition with a Resolution Accuracy of 99.4%, so you can land more killing blows with
+                            pinpoint precision.</p>
+                    </div>
+                    <div class="product-dets hidden">
+                        <div class="d-flex justify-content-center">
+                            <ul class="list-unstyled d-flex flex-column align-items-center">
+                                <li>True 16,000 DPI optical sensor</li>
+                                <li>Up to 450 IPS / 50 g acceleration</li>
+                                <li>Razer Mechanical Mouse switches </li>
+                                <li>Ergonomic right-handed design with textured rubber side grips</li>
+                                <li>Gaming-grade tactile scroll wheel</li>
+                                <li>7 independently programmable Hyperesponse buttons</li>
+                                <li>Razer Chroma™ lighting with 16.8 million customizable color options</li>
+                                <li>Razer Synapse enabled</li>
+                                <li>1000 Hz ultrapolling</li>
+                                <li>On-the-fly sensitivity adjustment</li>
+                                <li>Gold-plated USB connector</li>
+                                <li>Seven-foot, lightweight, braided fiber cable</li>
+                                <li>Size: 127 mm (Length) x 70 mm (Width) x 44 (Height)</li>
+                                <li>Approximate weight: 105 g / 0.23 lbs</li>
+                                <li>Compatible with Xbox One for basic input</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-review hidden" id="product-rev-div">
+                        <div class="row">
+                            <div class="d-flex flex-column align-items-center rating-pane col-lg-3 col-12">
+                                <h4 class="review-rating">
+                                    4.5
+                                    <i class="fa fa-star ml-2" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </h4>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-center">
+                                        <div class="rating-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="rating-progress-bar">
+                                            <div class="inner-progress-bar" style="width: 80%;"></div>
+                                        </div>
+                                        <p class="review-count">3</p>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="rating-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="rating-progress-bar">
+                                            <div class="inner-progress-bar" style="width: 60%;"></div>
+                                        </div>
+                                        <p class="review-count">2</p>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="rating-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="rating-progress-bar">
+
+                                        </div>
+                                        <p class="review-count">0</p>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="rating-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="rating-progress-bar">
+
+                                        </div>
+                                        <p class="review-count">0</p>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="rating-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="rating-progress-bar">
+
+                                        </div>
+                                        <p class="review-count">0</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="reviews col-lg-6 col-12">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <div class="review-heading">
+                                            <h5 class="reviewer-name">John</h5>
+                                            <p class="review-date">27 DEC 2018, 8:0 PM</p>
+                                            <div class="review-rating">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o empty" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna
+                                                aliqua</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="review-heading">
+                                            <h5 class="reviewer-name">John</h5>
+                                            <p class="review-date">27 DEC 2018, 8:0 PM</p>
+                                            <div class="review-rating">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o empty" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna
+                                                aliqua</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="review-heading">
+                                            <h5 class="reviewer-name">John</h5>
+                                            <p class="review-date">27 DEC 2018, 8:0 PM</p>
+                                            <div class="review-rating">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o empty" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna
+                                                aliqua</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="reviews-pagination d-flex justify-content-center mb-3">
+                                    <li class="active-page d-flex align-items-center justify-content-center">
+                                        1
+                                    </li>
+                                    <li class="d-flex inactive align-items-center justify-content-center">
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li class="d-flex inactive align-items-center justify-content-center">
+                                        <a href="#">3</a>
+                                    </li>
+                                    <li class="d-flex inactive align-items-center justify-content-center">
+                                        <a href="#">4</a>
+                                    </li>
+                                    <li class="d-flex inactive align-items-center justify-content-center">
+                                        <a href="#">
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="review-form-div col-lg-3 col-12">
+                                <form class="review-form">
+                                    <input class="input" type="text" placeholder="Your Name">
+                                    <input class="input" type="email" placeholder="Your Email">
+                                    <textarea class="input" placeholder="Your Review"></textarea>
+                                    <div class="input-rating d-flex align-items-center">
+                                        <span>Your Rating: </span>
+                                        <div class="inputs">
+                                            <input id="star5" name="rating" value="1" type="radio">
+                                            <input id="star4" name="rating" value="2" type="radio">
+                                            <input id="star3" name="rating" value="3" type="radio">
+                                            <input id="star2" name="rating" value="4" type="radio">
+                                            <input id="star1" name="rating" value="5" type="radio">
+                                        </div>
+                                        <div class="stars d-flex ml-1">
+                                            <i class="fa fa-star-o void-rating-star" data-id="1" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o void-rating-star" data-id="2" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o void-rating-star" data-id="3" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o void-rating-star" data-id="4" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o void-rating-star" data-id="5" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <button class="review-submit-btn">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PRODUCT TAB END -->
+        <!-- RELATED PRODUCTS START -->
+        <section class="container related-products">
+            <h3 class="related-product-section-header d-flex justify-content-center">Related products</h3>
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <div class="new-product-elem d-flex flex-column align-items-center">
+                        <div class="product-image">
+                            <img src="img/product03.png" alt="">
+                        </div>
+                        <div class="product-body d-flex flex-column align-items-center">
+                            <div class="product-details d-flex flex-column align-items-center">
+                                <p class="new-product-category mb-2">CATEGORY</p>
+                                <p class="new-product-name mb-2">PODUCT NAME GOES HERE</p>
+                                <div class="product-price-div d-flex align-items-end justify-content-between mb-2">
+                                    <h4>$980.00</h4><del class="">$990.00</del>
+                                </div>
+                            </div>
+                            <div class="product-rating d-flex justify-content-center align-items-center">
+                                <div class="before-stars"></div>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <div class="after-stars"></div>
+                            </div>
+                            <div class="control-bar d-flex justify-content-between">
+                                <button class="add-to-wishlist d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to wishlist</span>
+                                </button>
+                                <button class="compare d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to Compare</span>
+                                </button>
+                                <button class="quick-view d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Quick View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-div d-flex justify-content-center align-items-center p-2">
+                            <button class="add-to-cart d-flex align-items-center">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <p class="d-flex">ADD TO CART</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="new-product-elem d-flex flex-column align-items-center">
+                        <div class="product-image">
+                            <img src="img/product03.png" alt="">
+                        </div>
+                        <div class="product-body d-flex flex-column align-items-center">
+                            <div class="product-details d-flex flex-column align-items-center">
+                                <p class="new-product-category mb-2">CATEGORY</p>
+                                <p class="new-product-name mb-2">PODUCT NAME GOES HERE</p>
+                                <div class="product-price-div d-flex align-items-end justify-content-between mb-2">
+                                    <h4>$980.00</h4><del class="">$990.00</del>
+                                </div>
+                            </div>
+                            <div class="product-rating d-flex justify-content-center align-items-center">
+                                <div class="before-stars"></div>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <div class="after-stars"></div>
+                            </div>
+                            <div class="control-bar d-flex justify-content-between">
+                                <button class="add-to-wishlist d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to wishlist</span>
+                                </button>
+                                <button class="compare d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to Compare</span>
+                                </button>
+                                <button class="quick-view d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Quick View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-div d-flex justify-content-center align-items-center p-2">
+                            <button class="add-to-cart d-flex align-items-center">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <p class="d-flex">ADD TO CART</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="new-product-elem d-flex flex-column align-items-center">
+                        <div class="product-image">
+                            <img src="img/product03.png" alt="">
+                        </div>
+                        <div class="product-body d-flex flex-column align-items-center">
+                            <div class="product-details d-flex flex-column align-items-center">
+                                <p class="new-product-category mb-2">CATEGORY</p>
+                                <p class="new-product-name mb-2">PODUCT NAME GOES HERE</p>
+                                <div class="product-price-div d-flex align-items-end justify-content-between mb-2">
+                                    <h4>$980.00</h4><del class="">$990.00</del>
+                                </div>
+                            </div>
+                            <div class="product-rating d-flex justify-content-center align-items-center">
+                                <div class="before-stars"></div>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <div class="after-stars"></div>
+                            </div>
+                            <div class="control-bar d-flex justify-content-between">
+                                <button class="add-to-wishlist d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to wishlist</span>
+                                </button>
+                                <button class="compare d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to Compare</span>
+                                </button>
+                                <button class="quick-view d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Quick View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-div d-flex justify-content-center align-items-center p-2">
+                            <button class="add-to-cart d-flex align-items-center">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <p class="d-flex">ADD TO CART</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="new-product-elem d-flex flex-column align-items-center">
+                        <div class="product-image">
+                            <img src="img/product03.png" alt="">
+                        </div>
+                        <div class="product-body d-flex flex-column align-items-center">
+                            <div class="product-details d-flex flex-column align-items-center">
+                                <p class="new-product-category mb-2">CATEGORY</p>
+                                <p class="new-product-name mb-2">PODUCT NAME GOES HERE</p>
+                                <div class="product-price-div d-flex align-items-end justify-content-between mb-2">
+                                    <h4>$980.00</h4><del class="">$990.00</del>
+                                </div>
+                            </div>
+                            <div class="product-rating d-flex justify-content-center align-items-center">
+                                <div class="before-stars"></div>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <div class="after-stars"></div>
+                            </div>
+                            <div class="control-bar d-flex justify-content-between">
+                                <button class="add-to-wishlist d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to wishlist</span>
+                                </button>
+                                <button class="compare d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to Compare</span>
+                                </button>
+                                <button class="quick-view d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Quick View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-div d-flex justify-content-center align-items-center p-2">
+                            <button class="add-to-cart d-flex align-items-center">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <p class="d-flex">ADD TO CART</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- RELATED PRODUCTS END -->
+        <!-- NEWSLETTER START -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content col-md-12 d-flex flex-column align-items-center">
+                    <p>Sign Up for the <span>NEWSLETTER</span></p>
+                    <div class="newsletter-input-subs d-flex justify-content-center">
+                        <form action="" class="d-flex justify-content-center">
+                            <input class="newsletter-input" type="text" placeholder="Enter Your Email">
+                            <button class="subscribe-btn d-flex justify-content-between align-items-center">
+                                <i class="fa fa-envelope"></i>
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                    <div class="social-links-nav">
+                        <ul class="social-link-list d-flex">
+                            <li>
+                                <a class="social-link d-flex align-items-center justify-content-center" href="">
+                                    <i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a class="social-link d-flex align-items-center justify-content-center" href="">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social-link d-flex align-items-center justify-content-center" href="">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social-link d-flex align-items-center justify-content-center" href="">
+                                    <i class="fa fa-pinterest"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- NEWSLETTER END -->
+    </main>
+    <!-- MAIN END -->
+    <!-- FOOTER-START -->
+    <footer>
+        <div id="upper-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>ABOUT US</h6>
+                        <ul>
+                            <li>
+                                <a href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455 "
+                                    target="_blank " class="d-flex ">
+                                    <i class="fas fa-map-marker-alt "></i>
+                                    <p>Nizami küçəsi 203B</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+994(012)4442633 " class="d-flex ">
+                                    <i class="fas fa-phone-alt "></i>
+                                    <p>+994(012) 444 26 33</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:email@ezsell.az " class="d-flex ">
+                                    <i class="far fa-envelope "></i>
+                                    <p>email@ezsell.az</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>CATEGORIES</h6>
+                        <ul>
+                            <li>
+                                <a href=" ">Hot deals</a>
+                            </li>
+                            <li>
+                                <a href=" ">Laptops</a>
+                            </li>
+                            <li>
+                                <a href=" ">Smartphones</a>
+                            </li>
+                            <li>
+                                <a href=" ">Cameras</a>
+                            </li>
+                            <li>
+                                <a href=" ">Accessories</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>INFORMATION</h6>
+                        <ul>
+                            <li>
+                                <a href=" ">About Us</a>
+                            </li>
+                            <li>
+                                <a href=" ">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href=" ">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href=" ">Orders and Returns</a>
+                            </li>
+                            <li>
+                                <a href=" ">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>SERVICE</h6>
+                        <ul>
+                            <li>
+                                <a href=" ">My Account</a>
+                            </li>
+                            <li>
+                                <a href=" ">View Cart</a>
+                            </li>
+                            <li>
+                                <a href=" ">Wishlist</a>
+                            </li>
+                            <li>
+                                <a href=" ">Track My Order</a>
+                            </li>
+                            <li>
+                                <a href=" ">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lower-footer">
+            <div class="container d-flex justify-content-center ">
+                <div class="d-flex flex-column justify-content-center ">
+                    <ul class="d-flex p-0 justify-content-center ">
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-visa "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <i class="fa fa-credit-card "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <i class="fa fa-cc-paypal "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-mastercard "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-discover "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-amex "></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>Copyright ©2020 All rights reserved | This web application is made by
+                        <a id="project-author " href="https://www.linkedin.com/in/imran-ahmadov-705039144/ " target="_blank"
+                            style="text-decoration:none"><span>Imran Ahmadov</span></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+    <script src="https://kit.fontawesome.com/6c10cc7e6e.js " crossorigin="anonymous "></script>
+    <script src="js/product.js"></script>
+</body>
+
+</html>

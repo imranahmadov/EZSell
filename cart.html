@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <title>EZSell - Shopping Cart</title>
+</head>
+
+<body>
+    <!-- HEADER START -->
+    <header>
+        <div id="header-top">
+            <div class="container">
+                <div class="top-nav row d-flex justify-content-center justify-content-lg-between">
+                    <div class="row d-flex m-0 justify-content-center">
+                        <div class="row d-flex m-0 justify-content-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                <a class="top-nav-link" href="tel:+994(012)4442633">+994(012) 444 26 33</a>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="far fa-envelope" aria-hidden="true"></i>
+                                <a class="top-nav-link" href="mailto:email@ezsell.az">email@ezsell.az</a>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <a class="top-nav-link"
+                                    href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455"
+                                    target="_blank">Nizami küçəsi 203B</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="far fa-user" aria-hidden="true"></i>
+                            <a class="top-nav-link" href="#">
+                                <p>My Account</p>
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+                            <div>
+                                <select class="" id="select-currency">
+                                    <option value="0" selected="selected">USD</option>
+                                    <option value="1">AZN</option>
+                                    <option value="1">EURO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-ad-btn-div pt-2 pb-1 d-flex align-items-center col-10 col-lg-3">
+                        <a class="create-ad-btn d-flex align-items-center justify-content-center" href="#">
+                            Create your ad
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="header-low">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex align-items-center justify-content-lg-start justify-content-center col-lg-3">
+                        <a href="#"><img src="img/ez-sell-logo-xs.png" alt=""></a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center col-lg-6 main-search-bar">
+                        <form class="search-items d-flex justify-content-center">
+                            <select class="input-select" id="select-category">
+                                <option value="0">All Categories</option>
+                                <option value="1">Category 01</option>
+                                <option value="2">Category 02</option>
+                            </select>
+                            <input class="input" id="item-search-input" placeholder="Search items">
+                            <button class="search-btn">Search</button>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-end col-lg-3" id="cart-and-wishlist">
+                        <a href="#">
+                            <div class="nav-side-btn" id="wishlist-btn">
+                                <div class="d-flex align-items-center justify-content-center wishlist-bar">
+                                    <i class="far fa-heart"></i>
+                                    <div class="d-flex justify-content-center qty" id="wishlist-qty">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <p>Your Wishlist</p>
+                            </div>
+                        </a>
+
+                        <div class="nav-side-btn" id="cart-btn">
+                            <div class="d-flex align-items-center justify-content-center cart-bar">
+                                <i class="fas fa-shopping-cart"></i>
+                                <div class="d-flex justify-content-center qty" id="cart-item-qty">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <p>Your Cart</p>
+                            <div class="dropdown-cart d-none">
+                                <div class="dropdown-body">
+                                    <div class="dropdown-list">
+                                        <div class="dropdown-product d-flex">
+                                            <div class="dd-item-img">
+                                                <div
+                                                    class="delete-item d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-times"></i>
+                                                </div>
+                                                <img src="img/product01.png" alt="">
+                                            </div>
+                                            <div class="dd-item-info">
+                                                <a href="" class="dd-item-name">
+                                                    Product name goes here
+                                                </a>
+                                                <div class="dd-item-count d-flex align-items-baseline">
+                                                    <span class="item-qty">
+                                                        1x
+                                                    </span>
+                                                    <h4>
+                                                        $980.00
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-product d-flex">
+                                            <div class="dd-item-img">
+                                                <div
+                                                    class="delete-item d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-times"></i>
+                                                </div>
+                                                <img src="img/product01.png" alt="">
+                                            </div>
+                                            <div class="dd-item-info">
+                                                <a href="" class="dd-item-name">
+                                                    Product name goes here
+                                                </a>
+                                                <div class="dd-item-count d-flex align-items-baseline">
+                                                    <span class="item-qty">
+                                                        1x
+                                                    </span>
+                                                    <h4>
+                                                        $980.00
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-product d-flex">
+                                            <div class="dd-item-img">
+                                                <div
+                                                    class="delete-item d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-times"></i>
+                                                </div>
+                                                <img src="img/product01.png" alt="">
+                                            </div>
+                                            <div class="dd-item-info">
+                                                <a href="" class="dd-item-name">
+                                                    Product name goes here
+                                                </a>
+                                                <div class="dd-item-count d-flex align-items-baseline">
+                                                    <span class="item-qty">
+                                                        1x
+                                                    </span>
+                                                    <h4>
+                                                        $980.00
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="dropdown-summary">
+                                        <p><span>3</span> item(s) selected</p>
+                                        <h4>Subtotal: <span>$2940.00</span></h4>
+                                    </div>
+                                </div>
+                                <div class="dropdown-nav d-flex">
+                                    <a class="dropdown-link" href="">
+                                        <div>
+                                            View Cart
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-link" href="">
+                                        <div>
+                                            Checkout
+                                            <i class="fa fa-arrow-circle-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-toggle d-flex d-lg-none">
+                            <a class="d-flex flex-column align-items-center" href="#">
+                                <i class="fa fa-bars"></i>
+                                <span>Menu</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+    <!-- NAVBAR START-->
+    <nav>
+        <div class="container responsive-nav">
+            <ul class="d-lg-flex nav-section">
+                <li class="active">
+                    <a href="#">Shopping Cart</a>
+                </li>
+                <li>
+                    <a href="#">Your Orders</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- NAVBAR END-->
+    <!-- MAIN START -->
+    <main>
+        <!-- SECTION START -->
+        <section class="pt-4">
+            <div class="cart-container container-fluid px-4">
+                <div class="row" id="cart-tab">
+                    <div class="product-tabs col-lg-9 col-12">
+                        <div class="tab-content">
+                            <div class="tab-header d-flex align-items-center">
+                                <h3 class="">Your Cart</h3>
+                            </div>
+                            <div class="tab-horizontal-rule p-0 d-flex justify-content-between">
+                                <div class="select-all-items">
+                                    <input type="checkbox" name="" id="checkboxSelectAll">
+                                    <span>Select All Items</span>
+                                    <p></p>
+                                </div>
+                                <div class="d-flex p-0 justify-content-end">
+                                    <p>Price</p>
+                                </div>
+                            </div>
+                            <div class="cart-list p-0">
+                                <div class="cart-item pb-3 row">
+                                    <div class="item-checkbox d-flex align-items-center col-1">
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="row col-10">
+                                        <div class="d-flex justify-content-center col-lg-2 col-12">
+                                            <div class="cart-item-img d-flex align-items-center justify-content-center">
+                                                <img src="img/razer1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body col-lg-10 col-12">
+                                            <div
+                                                class="d-flex justify-content-center justify-content-lg-start cart-item-name">
+                                                <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                            </div>
+                                            <span
+                                                class="product-stock-status d-flex justify-content-center justify-content-lg-start m-0">In
+                                                Stock</span>
+                                            <div class="cart-item-nav row">
+
+                                                <label
+                                                    class="m-0 col-lg-3 d-flex justify-content-center justify-content-lg-start align-items-center">Qty:
+                                                    <select class="ml-2 input-select quantity-select">
+                                                        <option value="0">0</option>
+                                                        <option value="1" selected="selected">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10+</option>
+                                                    </select>
+                                                    <div class=" ml-2 input-number quantity-enter d-none">
+                                                        <input class="qty-input" type="number">
+                                                    </div>
+                                                    <button class="quantity-update d-none">
+                                                        Update
+                                                    </button>
+                                                </label>
+                                                <div
+                                                    class="d-flex justify-content-center justify-content-lg-start pt-3 col-lg-8 col-12">
+                                                    <ul class="row d-flex nav-section p-0">
+                                                        <li>
+                                                            <a href="#">Delete</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Save for Later</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Compare with similar items</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-price d-flex justify-content-end pr-0 col-1">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="cart-item pb-3 row">
+                                    <div class="item-checkbox d-flex align-items-center col-1">
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="row col-10">
+                                        <div class="d-flex justify-content-center col-lg-2 col-12">
+                                            <div class="cart-item-img d-flex align-items-center justify-content-center">
+                                                <img src="img/razer1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body col-lg-10 col-12">
+                                            <div
+                                                class="d-flex justify-content-center justify-content-lg-start cart-item-name">
+                                                <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                            </div>
+                                            <span
+                                                class="product-stock-status d-flex justify-content-center justify-content-lg-start m-0">In
+                                                Stock</span>
+                                            <div class="cart-item-nav row">
+
+                                                <label
+                                                    class="m-0 col-lg-3 d-flex justify-content-center justify-content-lg-start align-items-center">Qty:
+                                                    <select class="ml-2 input-select quantity-select">
+                                                        <option value="0">0</option>
+                                                        <option value="1" selected="selected">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10+</option>
+                                                    </select>
+                                                    <div class=" ml-2 input-number quantity-enter d-none">
+                                                        <input class="qty-input" type="number">
+                                                    </div>
+                                                    <button class="quantity-update d-none">
+                                                        Update
+                                                    </button>
+                                                </label>
+                                                <div
+                                                    class="d-flex justify-content-center justify-content-lg-start pt-3 col-lg-8 col-12">
+                                                    <ul class="row d-flex nav-section p-0">
+                                                        <li>
+                                                            <a href="#">Delete</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Save for Later</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Compare with similar items</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-price d-flex justify-content-end pr-0 col-1">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="cart-item pb-3 row">
+                                    <div class="item-checkbox d-flex align-items-center col-1">
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="row col-10">
+                                        <div class="d-flex justify-content-center col-lg-2 col-12">
+                                            <div class="cart-item-img d-flex align-items-center justify-content-center">
+                                                <img src="img/razer1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body col-lg-10 col-12">
+                                            <div
+                                                class="d-flex justify-content-center justify-content-lg-start cart-item-name">
+                                                <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                            </div>
+                                            <span
+                                                class="product-stock-status d-flex justify-content-center justify-content-lg-start m-0">In
+                                                Stock</span>
+                                            <div class="cart-item-nav row">
+
+                                                <label
+                                                    class="m-0 col-lg-3 d-flex justify-content-center justify-content-lg-start align-items-center">Qty:
+                                                    <select class="ml-2 input-select quantity-select">
+                                                        <option value="0">0</option>
+                                                        <option value="1" selected="selected">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10+</option>
+                                                    </select>
+                                                    <div class=" ml-2 input-number quantity-enter d-none">
+                                                        <input class="qty-input" type="number">
+                                                    </div>
+                                                    <button class="quantity-update d-none">
+                                                        Update
+                                                    </button>
+                                                </label>
+                                                <div
+                                                    class="d-flex justify-content-center justify-content-lg-start pt-3 col-lg-8 col-12">
+                                                    <ul class="row d-flex nav-section p-0">
+                                                        <li>
+                                                            <a href="#">Delete</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Save for Later</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Compare with similar items</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-price d-flex justify-content-end pr-0 col-1">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="cart-item pb-3 row">
+                                    <div class="item-checkbox d-flex align-items-center col-1">
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="row col-10">
+                                        <div class="d-flex justify-content-center col-lg-2 col-12">
+                                            <div class="cart-item-img d-flex align-items-center justify-content-center">
+                                                <img src="img/razer1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body col-lg-10 col-12">
+                                            <div
+                                                class="d-flex justify-content-center justify-content-lg-start cart-item-name">
+                                                <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                            </div>
+                                            <span
+                                                class="product-stock-status d-flex justify-content-center justify-content-lg-start m-0">In
+                                                Stock</span>
+                                            <div class="cart-item-nav row">
+
+                                                <label
+                                                    class="m-0 col-lg-3 d-flex justify-content-center justify-content-lg-start align-items-center">Qty:
+                                                    <select class="ml-2 input-select quantity-select">
+                                                        <option value="0">0</option>
+                                                        <option value="1" selected="selected">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10+</option>
+                                                    </select>
+                                                    <div class=" ml-2 input-number quantity-enter d-none">
+                                                        <input class="qty-input" type="number">
+                                                    </div>
+                                                    <button class="quantity-update d-none">
+                                                        Update
+                                                    </button>
+                                                </label>
+                                                <div
+                                                    class="d-flex justify-content-center justify-content-lg-start pt-3 col-lg-8 col-12">
+                                                    <ul class="row d-flex nav-section p-0">
+                                                        <li>
+                                                            <a href="#">Delete</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Save for Later</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Compare with similar items</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-price d-flex justify-content-end pr-0 col-1">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="save-for-later">
+                            <div class="tab-header d-flex align-items-center">
+                                <h3 class="">Saved for Later</h3>
+                            </div>
+                            <div class="saved-for-later-list">
+                                <div class="saved-for-later-item pb-3 row">
+                                    <div class="row col-11">
+                                        <div class="d-flex justify-content-center col-lg-3 col-12">
+                                            <div
+                                                class="saved-for-later-item-img d-flex align-items-center justify-content-center">
+                                                <img src="img/razer1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="saved-for-later-item-body col-lg-9 col-12">
+                                            <div
+                                                class="d-flex justify-content-center justify-content-lg-start saved-for-later-item-name">
+                                                <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                            </div>
+                                            <span
+                                                class="product-stock-status d-flex justify-content-center justify-content-lg-start m-0">In
+                                                Stock</span>
+                                            <div class="saved-for-later-item-nav row">
+                                                <div
+                                                    class="d-flex justify-content-center justify-content-lg-start px-0 pt-3 col-lg-8 col-12">
+                                                    <ul class="row d-flex nav-section p-0">
+                                                        <li>
+                                                            <a href="#">Delete</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Move to Cart</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Move to Wish List</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Compare with similar items</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="saved-for-later-item-price d-flex justify-content-end pr-0 col-1">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="saved-for-later-item pb-3 row">
+                                    <div class="row col-11">
+                                        <div class="d-flex justify-content-center col-lg-3 col-12">
+                                            <div
+                                                class="saved-for-later-item-img d-flex align-items-center justify-content-center">
+                                                <img src="img/razer1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="saved-for-later-item-body col-lg-9 col-12">
+                                            <div
+                                                class="d-flex justify-content-center justify-content-lg-start saved-for-later-item-name">
+                                                <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                            </div>
+                                            <span
+                                                class="product-stock-status d-flex justify-content-center justify-content-lg-start m-0">In
+                                                Stock</span>
+                                            <div class="saved-for-later-item-nav row">
+                                                <div
+                                                    class="d-flex justify-content-center justify-content-lg-start px-0 pt-3 col-lg-8 col-12">
+                                                    <ul class="row d-flex nav-section p-0">
+                                                        <li>
+                                                            <a href="#">Delete</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Move to Cart</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Move to Wish List</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Compare with similar items</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="saved-for-later-item-price d-flex justify-content-end pr-0 col-1">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="saved-for-later-item pb-3 row">
+                                    <div class="row col-11">
+                                        <div class="d-flex justify-content-center col-lg-3 col-12">
+                                            <div
+                                                class="saved-for-later-item-img d-flex align-items-center justify-content-center">
+                                                <img src="img/razer1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="saved-for-later-item-body col-lg-9 col-12">
+                                            <div
+                                                class="d-flex justify-content-center justify-content-lg-start saved-for-later-item-name">
+                                                <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                            </div>
+                                            <span
+                                                class="product-stock-status d-flex justify-content-center justify-content-lg-start m-0">In
+                                                Stock</span>
+                                            <div class="saved-for-later-item-nav row">
+                                                <div
+                                                    class="d-flex justify-content-center justify-content-lg-start px-0 pt-3 col-lg-8 col-12">
+                                                    <ul class="row d-flex nav-section p-0">
+                                                        <li>
+                                                            <a href="#">Delete</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Move to Cart</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Move to Wish List</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Compare with similar items</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="saved-for-later-item-price d-flex justify-content-end pr-0 col-1">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-details mt-2 col-lg-3 col-12">
+                        <div class="section-title text-center">
+                            <h3 class="title">Your Order</h3>
+                        </div>
+                        <div class="order-summary">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="first-elem">Product</th>
+                                        <th class="last-elem">Total</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="first-elem">1x Product Name Goes Here</td>
+                                        <td class="last-elem">$980.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first-elem">2x Product Name Goes Here</td>
+                                        <td class="last-elem">$980.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first-elem">Shipping</td>
+                                        <td class="last-elem shipping-cost">Free</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="first-elem total-cost-text">Total</p>
+                                        </td>
+                                        <td>
+                                            <h3 class="last-elem total-cost">$2940.00</h3>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="section-title text-center">
+                            <h3 class="title">No items selected</h3>
+                        </div>
+                        <a href="#" class="place-order-btn">
+                            <i class="fas fa-lock"></i>
+                            Proceed to checkout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="orders-container container d-none">
+                <div class="tab-header d-flex align-items-center">
+                    <h3 class="">Your Orders</h3>
+                </div>
+                <div class="orders-list">
+                    <div class="order-card mb-5">
+                        <div class="order-header d-flex justify-content-between">
+                            <div class="header-container w-100 d-flex justify-content-between">
+                                <ul class="list-unstyled d-flex m-0">
+                                    <li>
+                                        <div class="">
+                                            <p>ORDER PLACED</p>
+                                            <p>August 31, 2020</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <p>TOTAL</p>
+                                            <p>$69.99</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <p>SHIP TO</p>
+                                            <p>Imran Ahmadov</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <p>ORDER # 114-9407448-5477000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-body">
+                            <div class="order-item pt-3 row">
+                                <div class="d-flex align-items-center col-lg-3 col-12">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="order-item-img d-flex align-items-center justify-content-center">
+                                            <img src="img/razer2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex flex-column align-items-lg-start align-items-center order-item-body col-lg-6 col-12">
+                                    <div class="order-item-name">
+                                        <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                    </div>
+                                    <div class="order-seller-profile">
+                                        Sold by:
+                                        <a href="">Razer</a>
+                                    </div>
+                                    <div class="order-item-price">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mb-2 col-12">
+                                    <a href="#" class="write-review-btn">
+                                        <i class="fas fa-star-half-alt"></i>
+                                        Write a Review
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="order-item pt-3 row">
+                                <div class="d-flex align-items-center col-lg-3 col-12">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="order-item-img d-flex align-items-center justify-content-center">
+                                            <img src="img/razer2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex flex-column align-items-lg-start align-items-center order-item-body col-lg-6 col-12">
+                                    <div class="order-item-name">
+                                        <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                    </div>
+                                    <div class="order-seller-profile">
+                                        Sold by:
+                                        <a href="">Razer</a>
+                                    </div>
+                                    <div class="order-item-price">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mb-2 col-12">
+                                    <a href="#" class="write-review-btn">
+                                        <i class="fas fa-star-half-alt"></i>
+                                        Write a Review
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="order-item pt-3 row">
+                                <div class="d-flex align-items-center col-lg-3 col-12">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="order-item-img d-flex align-items-center justify-content-center">
+                                            <img src="img/razer2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex flex-column align-items-lg-start align-items-center order-item-body col-lg-6 col-12">
+                                    <div class="order-item-name">
+                                        <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                    </div>
+                                    <div class="order-seller-profile">
+                                        Sold by:
+                                        <a href="">Razer</a>
+                                    </div>
+                                    <div class="order-item-price">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mb-2 col-12">
+                                    <a href="#" class="write-review-btn">
+                                        <i class="fas fa-star-half-alt"></i>
+                                        Write a Review
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-card mb-5">
+                        <div class="order-header d-flex justify-content-between">
+                            <div class="header-container w-100 d-flex justify-content-between">
+                                <ul class="list-unstyled d-flex m-0">
+                                    <li>
+                                        <div class="">
+                                            <p>ORDER PLACED</p>
+                                            <p>August 31, 2020</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <p>TOTAL</p>
+                                            <p>$69.99</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <p>SHIP TO</p>
+                                            <p>Imran Ahmadov</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <p>ORDER # 114-9407448-5477000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-body">
+                            <div class="order-item pt-3 row">
+                                <div class="d-flex align-items-center col-lg-3 col-12">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="order-item-img d-flex align-items-center justify-content-center">
+                                            <img src="img/razer2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex flex-column align-items-lg-start align-items-center order-item-body col-lg-6 col-12">
+                                    <div class="order-item-name">
+                                        <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                    </div>
+                                    <div class="order-seller-profile">
+                                        Sold by:
+                                        <a href="">Razer</a>
+                                    </div>
+                                    <div class="order-item-price">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mb-2 col-12">
+                                    <a href="#" class="write-review-btn">
+                                        <i class="fas fa-star-half-alt"></i>
+                                        Write a Review
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="order-item pt-3 row">
+                                <div class="d-flex align-items-center col-lg-3 col-12">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="order-item-img d-flex align-items-center justify-content-center">
+                                            <img src="img/razer2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex flex-column align-items-lg-start align-items-center order-item-body col-lg-6 col-12">
+                                    <div class="order-item-name">
+                                        <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                    </div>
+                                    <div class="order-seller-profile">
+                                        Sold by:
+                                        <a href="">Razer</a>
+                                    </div>
+                                    <div class="order-item-price">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mb-2 col-12">
+                                    <a href="#" class="write-review-btn">
+                                        <i class="fas fa-star-half-alt"></i>
+                                        Write a Review
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="order-item pt-3 row">
+                                <div class="d-flex align-items-center col-lg-3 col-12">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="order-item-img d-flex align-items-center justify-content-center">
+                                            <img src="img/razer2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex flex-column align-items-lg-start align-items-center order-item-body col-lg-6 col-12">
+                                    <div class="order-item-name">
+                                        <a href="">Razer Deathadder Elite Gaming Mouse</a>
+                                    </div>
+                                    <div class="order-seller-profile">
+                                        Sold by:
+                                        <a href="">Razer</a>
+                                    </div>
+                                    <div class="order-item-price">
+                                        <h4>$90.00</h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mb-2 col-12">
+                                    <a href="#" class="write-review-btn">
+                                        <i class="fas fa-star-half-alt"></i>
+                                        Write a Review
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION END -->
+        <!-- SECTION START -->
+        <section class="container related-products">
+            <h3 class="related-product-section-header d-flex justify-content-center">Related products</h3>
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <div class="new-product-elem d-flex flex-column align-items-center">
+                        <div class="product-image">
+                            <img src="img/product03.png" alt="">
+                        </div>
+                        <div class="product-body d-flex flex-column align-items-center">
+                            <div class="product-details d-flex flex-column align-items-center">
+                                <p class="new-product-category mb-2">CATEGORY</p>
+                                <p class="new-product-name mb-2">PODUCT NAME GOES HERE</p>
+                                <div class="product-price-div d-flex align-items-end justify-content-between mb-2">
+                                    <h4>$980.00</h4><del class="">$990.00</del>
+                                </div>
+                            </div>
+                            <div class="product-rating d-flex justify-content-center align-items-center">
+                                <div class="before-stars"></div>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <div class="after-stars"></div>
+                            </div>
+                            <div class="control-bar d-flex justify-content-between">
+                                <button class="add-to-wishlist d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to wishlist</span>
+                                </button>
+                                <button class="compare d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to Compare</span>
+                                </button>
+                                <button class="quick-view d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Quick View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-div d-flex justify-content-center align-items-center p-2">
+                            <button class="add-to-cart d-flex align-items-center">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <p class="d-flex">ADD TO CART</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="new-product-elem d-flex flex-column align-items-center">
+                        <div class="product-image">
+                            <img src="img/product03.png" alt="">
+                        </div>
+                        <div class="product-body d-flex flex-column align-items-center">
+                            <div class="product-details d-flex flex-column align-items-center">
+                                <p class="new-product-category mb-2">CATEGORY</p>
+                                <p class="new-product-name mb-2">PODUCT NAME GOES HERE</p>
+                                <div class="product-price-div d-flex align-items-end justify-content-between mb-2">
+                                    <h4>$980.00</h4><del class="">$990.00</del>
+                                </div>
+                            </div>
+                            <div class="product-rating d-flex justify-content-center align-items-center">
+                                <div class="before-stars"></div>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <div class="after-stars"></div>
+                            </div>
+                            <div class="control-bar d-flex justify-content-between">
+                                <button class="add-to-wishlist d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to wishlist</span>
+                                </button>
+                                <button class="compare d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to Compare</span>
+                                </button>
+                                <button class="quick-view d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Quick View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-div d-flex justify-content-center align-items-center p-2">
+                            <button class="add-to-cart d-flex align-items-center">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <p class="d-flex">ADD TO CART</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="new-product-elem d-flex flex-column align-items-center">
+                        <div class="product-image">
+                            <img src="img/product03.png" alt="">
+                        </div>
+                        <div class="product-body d-flex flex-column align-items-center">
+                            <div class="product-details d-flex flex-column align-items-center">
+                                <p class="new-product-category mb-2">CATEGORY</p>
+                                <p class="new-product-name mb-2">PODUCT NAME GOES HERE</p>
+                                <div class="product-price-div d-flex align-items-end justify-content-between mb-2">
+                                    <h4>$980.00</h4><del class="">$990.00</del>
+                                </div>
+                            </div>
+                            <div class="product-rating d-flex justify-content-center align-items-center">
+                                <div class="before-stars"></div>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <div class="after-stars"></div>
+                            </div>
+                            <div class="control-bar d-flex justify-content-between">
+                                <button class="add-to-wishlist d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to wishlist</span>
+                                </button>
+                                <button class="compare d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to Compare</span>
+                                </button>
+                                <button class="quick-view d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Quick View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-div d-flex justify-content-center align-items-center p-2">
+                            <button class="add-to-cart d-flex align-items-center">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <p class="d-flex">ADD TO CART</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="new-product-elem d-flex flex-column align-items-center">
+                        <div class="product-image">
+                            <img src="img/product03.png" alt="">
+                        </div>
+                        <div class="product-body d-flex flex-column align-items-center">
+                            <div class="product-details d-flex flex-column align-items-center">
+                                <p class="new-product-category mb-2">CATEGORY</p>
+                                <p class="new-product-name mb-2">PODUCT NAME GOES HERE</p>
+                                <div class="product-price-div d-flex align-items-end justify-content-between mb-2">
+                                    <h4>$980.00</h4><del class="">$990.00</del>
+                                </div>
+                            </div>
+                            <div class="product-rating d-flex justify-content-center align-items-center">
+                                <div class="before-stars"></div>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <i class="fas fa-star rating-star" aria-hidden="true"></i>
+                                <div class="after-stars"></div>
+                            </div>
+                            <div class="control-bar d-flex justify-content-between">
+                                <button class="add-to-wishlist d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to wishlist</span>
+                                </button>
+                                <button class="compare d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Add to Compare</span>
+                                </button>
+                                <button class="quick-view d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span class="btn-tooltip">Quick View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-div d-flex justify-content-center align-items-center p-2">
+                            <button class="add-to-cart d-flex align-items-center">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <p class="d-flex">ADD TO CART</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION END -->
+    </main>
+    <!-- MAIN END -->
+    <!-- FOOTER-START -->
+    <footer>
+        <div id="upper-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>ABOUT US</h6>
+                        <ul>
+                            <li>
+                                <a href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455 "
+                                    target="_blank " class="d-flex ">
+                                    <i class="fas fa-map-marker-alt "></i>
+                                    <p>Nizami küçəsi 203B</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+994(012)4442633 " class="d-flex ">
+                                    <i class="fas fa-phone-alt "></i>
+                                    <p>+994(012) 444 26 33</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:email@ezsell.az " class="d-flex ">
+                                    <i class="far fa-envelope "></i>
+                                    <p>email@ezsell.az</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>CATEGORIES</h6>
+                        <ul>
+                            <li>
+                                <a href=" ">Hot deals</a>
+                            </li>
+                            <li>
+                                <a href=" ">Laptops</a>
+                            </li>
+                            <li>
+                                <a href=" ">Smartphones</a>
+                            </li>
+                            <li>
+                                <a href=" ">Cameras</a>
+                            </li>
+                            <li>
+                                <a href=" ">Accessories</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>INFORMATION</h6>
+                        <ul>
+                            <li>
+                                <a href=" ">About Us</a>
+                            </li>
+                            <li>
+                                <a href=" ">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href=" ">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href=" ">Orders and Returns</a>
+                            </li>
+                            <li>
+                                <a href=" ">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section col-6 col-lg-3">
+                        <h6>SERVICE</h6>
+                        <ul>
+                            <li>
+                                <a href=" ">My Account</a>
+                            </li>
+                            <li>
+                                <a href=" ">View Cart</a>
+                            </li>
+                            <li>
+                                <a href=" ">Wishlist</a>
+                            </li>
+                            <li>
+                                <a href=" ">Track My Order</a>
+                            </li>
+                            <li>
+                                <a href=" ">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lower-footer">
+            <div class="container d-flex justify-content-center ">
+                <div class="d-flex flex-column justify-content-center ">
+                    <ul class="d-flex p-0 justify-content-center ">
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-visa "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <i class="fa fa-credit-card "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <i class="fa fa-cc-paypal "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-mastercard "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-discover "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="# ">
+                                <i class="fa fa-cc-amex "></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>Copyright ©2020 All rights reserved | This web application is made by
+                        <a id="project-author " href="https://www.linkedin.com/in/imran-ahmadov-705039144/ "
+                            target="_blank" style="text-decoration:none"><span>Imran Ahmadov</span></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+    <script src="https://kit.fontawesome.com/6c10cc7e6e.js " crossorigin="anonymous "></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
