@@ -162,3 +162,23 @@ for (let i = 0; i < productTabs.children.length; i++) {
         }
     }
 }
+let justBool = false;
+let productImage = document.getElementsByClassName("product-image");
+let newElem = document.getElementsByClassName("new-product-elem");
+
+for (let image of productImage) {
+    image.onmouseover = function() {
+        justBool = true;
+    }
+    image.onmouseleave = function() {
+        justBool = false;
+    }
+}
+
+for (let elem of newElem) {
+    elem.onclick = function() {
+        if (justBool == true) {
+            location.href = "product.html";
+        }
+    }
+}

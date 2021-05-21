@@ -1,16 +1,14 @@
-
-(function ($) {
+(function($) {
     "use strict";
 
 
     /*==================================================================
     [ Focus input ]*/
-    $('.input100').each(function () {
-        $(this).on('blur', function () {
+    $('.input100').each(function() {
+        $(this).on('blur', function() {
             if ($(this).val().trim() != "") {
                 $(this).addClass('has-val');
-            }
-            else {
+            } else {
                 $(this).removeClass('has-val');
             }
         })
@@ -21,7 +19,7 @@
     [ Validate ]*/
     var input = $('.validate-input .input100');
 
-    $('.validate-form').on('submit', function () {
+    $('.validate-form').on('submit', function() {
         var check = true;
 
         for (var i = 0; i < input.length; i++) {
@@ -35,8 +33,8 @@
     });
 
 
-    $('.validate-form .input100').each(function () {
-        $(this).focus(function () {
+    $('.validate-form .input100').each(function() {
+        $(this).focus(function() {
             hideValidate(this);
         });
     });
@@ -46,8 +44,7 @@
             if ($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
                 return false;
             }
-        }
-        else {
+        } else {
             if ($(input).val().trim() == '') {
                 return false;
             }
@@ -69,14 +66,13 @@
     /*==================================================================
     [ Show pass ]*/
     var showPass = 0;
-    $('.btn-show-pass').on('click', function () {
+    $('.btn-show-pass').on('click', function() {
         if (showPass == 0) {
             $(this).next('input').attr('type', 'text');
             $(this).find('i').removeClass('fa-eye');
             $(this).find('i').addClass('fa-eye-slash');
             showPass = 1;
-        }
-        else {
+        } else {
             $(this).next('input').attr('type', 'password');
             $(this).find('i').addClass('fa-eye');
             $(this).find('i').removeClass('fa-eye-slash');
@@ -87,3 +83,29 @@
 
 
 })(jQuery);
+
+let btnLogin = document.getElementById("btn-login");
+let email = document.getElementsByName("email")[0];
+let pass = document.getElementsByName("pass")[0];
+
+btnLogin.onclick = function() {
+    if (email.value == "" || pass.value == "") {
+        alert("Please fill all input fields.");
+    } else if (email.value != "admin@ezsell.az" || pass.value != "admin") {
+        alert("Email or password is incorrect.");
+    } else {
+        location.href = "index.html";
+    }
+}
+
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        if (email.value == "" || pass.value == "") {
+            alert("Please fill all input fields.");
+        } else if (email.value != "admin@ezsell.az" || pass.value != "admin") {
+            alert("Email or password is incorrect.");
+        } else {
+            location.href = "index.html";
+        }
+    }
+});

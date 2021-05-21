@@ -3,7 +3,7 @@ let menuToggle = document.getElementsByClassName("menu-toggle")[0];
 let responsiveNav = document.getElementsByClassName("responsive-nav")[0];
 cart = document.getElementsByClassName("cart-container")[0];
 orders = document.getElementsByClassName("orders-container")[0];
-menuToggle.onclick = function () {
+menuToggle.onclick = function() {
     responsiveNav.classList.toggle("activated-nav");
 }
 
@@ -13,7 +13,7 @@ let ulNav = navResponsive.firstElementChild;
 let productTabs = document.getElementsByClassName("product-tabs")[0];
 
 for (let i = 0; i < ulNav.children.length; i++) {
-    ulNav.children[i].onclick = function (event) {
+    ulNav.children[i].onclick = function(event) {
         event.preventDefault();
         if (i == 0) {
             orders.classList.add("d-none");
@@ -35,18 +35,18 @@ for (let i = 0; i < ulNav.children.length; i++) {
 //checkbox select all items in cart
 let checkboxSelectAll = document.getElementById("checkboxSelectAll");
 let checkBoxDiv = document.getElementsByClassName("item-checkbox");
-checkboxSelectAll.onclick = function () {
-    for (let i = 0; i < checkBoxDiv.length; i++) {
-        if (checkboxSelectAll.checked == true) {
-            checkBoxDiv[i].firstElementChild.checked = true;
-        } else {
-            checkBoxDiv[i].firstElementChild.checked = false;
+checkboxSelectAll.onclick = function() {
+        for (let i = 0; i < checkBoxDiv.length; i++) {
+            if (checkboxSelectAll.checked == true) {
+                checkBoxDiv[i].firstElementChild.checked = true;
+            } else {
+                checkBoxDiv[i].firstElementChild.checked = false;
+            }
         }
     }
-}
-//checkbox select all event on no selected and all selected
+    //checkbox select all event on no selected and all selected
 for (let i = 0; i < checkBoxDiv.length; i++) {
-    checkBoxDiv[i].onclick = function () {
+    checkBoxDiv[i].onclick = function() {
         countChecked = 0;
         for (let j = 0; j < checkBoxDiv.length; j++) {
             if (checkBoxDiv[j].firstElementChild.checked == true) countChecked++;
@@ -60,7 +60,7 @@ let qtyDropdownList = document.getElementsByClassName("quantity-select");
 let qtyUpdateBtn = document.getElementsByClassName("quantity-update");
 let qtyEnter = document.getElementsByClassName("quantity-enter");
 for (let i = 0; i < qtyDropdownList.length; i++) {
-    qtyDropdownList[i].onchange = function () {
+    qtyDropdownList[i].onchange = function() {
         if (qtyDropdownList[i].options[qtyDropdownList[i].selectedIndex].value == 10) {
             for (let m = 0; m < qtyDropdownList[i].children.length; m++) {
                 qtyDropdownList[i].children[m].removeAttribute("selected");
@@ -70,11 +70,10 @@ for (let i = 0; i < qtyDropdownList.length; i++) {
             qtyUpdateBtn[i].classList.remove("d-none");
         }
     }
-    qtyUpdateBtn[i].onclick = function () {
+    qtyUpdateBtn[i].onclick = function() {
         if (qtyEnter[i].firstElementChild.value >= 10) {
             qtyUpdateBtn[i].classList.add("d-none");
-        }
-        else if (qtyEnter[i].firstElementChild.value > 0 && qtyEnter[i].firstElementChild.value < 10) {
+        } else if (qtyEnter[i].firstElementChild.value > 0 && qtyEnter[i].firstElementChild.value < 10) {
             qtyDropdownList[i].classList.remove("d-none");
             qtyEnter[i].classList.add("d-none");
             for (let j = 0; j < qtyDropdownList[i].children.length; j++) {
@@ -90,7 +89,7 @@ for (let i = 0; i < qtyDropdownList.length; i++) {
             }
         }
     }
-    qtyEnter[i].firstElementChild.onfocus = function () {
+    qtyEnter[i].firstElementChild.onfocus = function() {
         qtyUpdateBtn[i].classList.remove("d-none");
     }
 }
@@ -98,7 +97,7 @@ for (let i = 0; i < qtyDropdownList.length; i++) {
 let cartItemNavs = document.getElementsByClassName("cart-item-nav");
 for (let i = 0; i < cartItemNavs.length; i++) {
     for (let j = 0; j < cartItemNavs[i].children[1].children[0].children.length; j++) {
-        cartItemNavs[i].children[1].children[0].children[j].children[0].onclick = function (ev) {
+        cartItemNavs[i].children[1].children[0].children[j].children[0].onclick = function(ev) {
             ev.preventDefault();
         }
     }
@@ -107,7 +106,7 @@ for (let i = 0; i < cartItemNavs.length; i++) {
 let sflatertItemNavs = document.getElementsByClassName("saved-for-later-item");
 for (let i = 0; i < sflatertItemNavs.length; i++) {
     for (let j = 0; j < sflatertItemNavs[i].children[0].children[1].children[2].children[0].children[0].children.length; j++) {
-        sflatertItemNavs[i].children[0].children[1].children[2].children[0].children[0].children[j].onclick = function (ev) {
+        sflatertItemNavs[i].children[0].children[1].children[2].children[0].children[0].children[j].onclick = function(ev) {
             ev.preventDefault();
             console.log("re re");
         }
@@ -117,8 +116,20 @@ for (let i = 0; i < sflatertItemNavs.length; i++) {
 let orderCard = document.getElementsByClassName("order-card");
 for (let i = 0; i < orderCard.length; i++) {
     for (let j = 0; j < orderCard[i].children[1].children.length; j++) {
-        orderCard[i].children[1].children[j].children[2].children[0].onclick = function (ev) {
+        orderCard[i].children[1].children[j].children[2].children[0].onclick = function(ev) {
             ev.preventDefault();
         }
     }
+}
+
+//dropdown cart
+
+let dropdownCart = document.getElementsByClassName("dropdown-cart")[0];
+let cartBtn = document.getElementById("cart-btn");
+
+cartBtn.onclick = function() {
+    dropdownCart.classList.toggle("d-none");
+}
+dropdownCart.onclick = function(ev) {
+    ev.stopPropagation();
 }

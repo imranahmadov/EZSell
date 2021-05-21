@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZSell - Product</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -30,9 +29,7 @@
                             </div>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <a class="top-nav-link"
-                                    href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455"
-                                    target="_blank">Nizami küçəsi 203B</a>
+                                <a class="top-nav-link" href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455" target="_blank">Nizami küçəsi 203B</a>
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
@@ -53,7 +50,7 @@
                         </div>
                     </div>
                     <div class="create-ad-btn-div pt-2 pb-1 d-flex align-items-center col-10 col-lg-3">
-                        <a class="create-ad-btn d-flex align-items-center justify-content-center" href="#">
+                        <a class="create-ad-btn d-flex align-items-center justify-content-center" href="createad.html">
                             Create your ad
                         </a>
                     </div>
@@ -79,7 +76,7 @@
                         </form>
                     </div>
                     <div class="d-flex align-items-center justify-content-end col-lg-3" id="cart-and-wishlist">
-                        <a href="#">
+                        <a href="wishlist.html">
                             <div class="nav-side-btn" id="wishlist-btn">
                                 <div class="d-flex align-items-center justify-content-center wishlist-bar">
                                     <i class="far fa-heart"></i>
@@ -90,17 +87,102 @@
                                 <p>Your Wishlist</p>
                             </div>
                         </a>
-                        <a href="#">
-                            <div class="nav-side-btn" id="cart-btn">
-                                <div class="d-flex align-items-center justify-content-center cart-bar">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <div class="d-flex justify-content-center qty" id="cart-item-qty">
-                                        <p>0</p>
+                        <div class="nav-side-btn" id="cart-btn">
+                            <div class="d-flex align-items-center justify-content-center cart-bar">
+                                <i class="fas fa-shopping-cart"></i>
+                                <div class="d-flex justify-content-center qty" id="cart-item-qty">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <p>Your Cart</p>
+                            <div class="dropdown-cart d-none">
+                                <div class="dropdown-body">
+                                    <div class="dropdown-list">
+                                        <div class="dropdown-product d-flex">
+                                            <div class="dd-item-img">
+                                                <div class="delete-item d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-times"></i>
+                                                </div>
+                                                <img src="img/product01.png" alt="">
+                                            </div>
+                                            <div class="dd-item-info">
+                                                <a href="" class="dd-item-name">
+                                                    Product name goes here
+                                                </a>
+                                                <div class="dd-item-count d-flex align-items-baseline">
+                                                    <span class="item-qty">
+                                                        1x
+                                                    </span>
+                                                    <h4>
+                                                        $980.00
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-product d-flex">
+                                            <div class="dd-item-img">
+                                                <div class="delete-item d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-times"></i>
+                                                </div>
+                                                <img src="img/product01.png" alt="">
+                                            </div>
+                                            <div class="dd-item-info">
+                                                <a href="" class="dd-item-name">
+                                                    Product name goes here
+                                                </a>
+                                                <div class="dd-item-count d-flex align-items-baseline">
+                                                    <span class="item-qty">
+                                                        1x
+                                                    </span>
+                                                    <h4>
+                                                        $980.00
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-product d-flex">
+                                            <div class="dd-item-img">
+                                                <div class="delete-item d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-times"></i>
+                                                </div>
+                                                <img src="img/product01.png" alt="">
+                                            </div>
+                                            <div class="dd-item-info">
+                                                <a href="" class="dd-item-name">
+                                                    Product name goes here
+                                                </a>
+                                                <div class="dd-item-count d-flex align-items-baseline">
+                                                    <span class="item-qty">
+                                                        1x
+                                                    </span>
+                                                    <h4>
+                                                        $980.00
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="dropdown-summary">
+                                        <p><span>3</span> item(s) selected</p>
+                                        <h4>Subtotal: <span>$2940.00</span></h4>
                                     </div>
                                 </div>
-                                <p>Your Cart</p>
+                                <div class="dropdown-nav d-flex">
+                                    <a class="dropdown-link" href="cart.html">
+                                        <div>
+                                            View Cart
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-link" href="checkout.html">
+                                        <div>
+                                            Checkout
+                                            <i class="fa fa-arrow-circle-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </a>
+                        </div>
                         <div class="menu-toggle d-flex d-lg-none">
                             <a class="d-flex flex-column align-items-center" href="#">
                                 <i class="fa fa-bars"></i>
@@ -171,10 +253,8 @@
         <section class="product-info">
             <div class="container">
                 <div class="pt-3 row d-flex justify-content-center justify-content-lg-start">
-                    <div
-                        class="product-images d-flex flex-column flex-lg-row-reverse align-items-center align-items-lg-start col-lg-6 col-12">
-                        <div class="magnified-image mb-3 ml-2 d-flex align-items-center justify-content-center"
-                            id="magnifierDiv">
+                    <div class="product-images d-flex flex-column flex-lg-row-reverse align-items-center align-items-lg-start col-lg-6 col-12">
+                        <div class="magnified-image mb-3 ml-2 d-flex align-items-center justify-content-center" id="magnifierDiv">
                             <img class="active-image" src="img/razer1.jpg" alt="" data-id="1">
                             <img src="img/razer2.jpg" alt="" data-id="2">
                             <img src="img/razer3.jpg" alt="" data-id="3">
@@ -183,24 +263,19 @@
                         </div>
                         <div class="thumbnail-images">
                             <ul class="d-flex flex-lg-column">
-                                <li class="thumbnail-image d-flex align-items-center justify-content-center"
-                                    data-id="1">
+                                <li class="thumbnail-image d-flex align-items-center justify-content-center" data-id="1">
                                     <img src="img/razer1.jpg" alt="">
                                 </li>
-                                <li class="thumbnail-image d-flex align-items-center justify-content-center"
-                                    data-id="2">
+                                <li class="thumbnail-image d-flex align-items-center justify-content-center" data-id="2">
                                     <img src="img/razer2.jpg" alt="">
                                 </li>
-                                <li class="thumbnail-image d-flex align-items-center justify-content-center"
-                                    data-id="3">
+                                <li class="thumbnail-image d-flex align-items-center justify-content-center" data-id="3">
                                     <img src="img/razer3.jpg" alt="">
                                 </li>
-                                <li class="thumbnail-image d-flex align-items-center justify-content-center"
-                                    data-id="4">
+                                <li class="thumbnail-image d-flex align-items-center justify-content-center" data-id="4">
                                     <img src="img/razer4.jpg" alt="">
                                 </li>
-                                <li class="thumbnail-image d-flex align-items-center justify-content-center"
-                                    data-id="5">
+                                <li class="thumbnail-image d-flex align-items-center justify-content-center" data-id="5">
                                     <img src="img/razer5.jpg" alt="">
                                 </li>
                             </ul>
@@ -226,10 +301,8 @@
                             <span class="product-stock-status">In Stock</span>
                         </div>
                         <ul class="product-about-info m-0">
-                            <li>Gaming mouse with one of the world's enhanced optical sensor with true 16000 DPI,
-                                450
-                                IPS and 99 4 percent resolution
-                                accuracy</li>
+                            <li>Gaming mouse with one of the world's enhanced optical sensor with true 16000 DPI, 450 IPS and 99 4 percent resolution accuracy
+                            </li>
                             <li>Gaming optimised razer mechanical mouse switches durable up to 50 million clicks
                             </li>
                             <li>Ergonomic form factor has been tested and validated by top esports athletes</li>
@@ -249,21 +322,16 @@
                             </button>
                         </div>
                         <div class="d-flex flex-column align-items-start">
-                            <button
-                                class="product-add-to-wishlist p-0 d-flex justify-content-center align-items-center">
+                            <button class="product-add-to-wishlist p-0 d-flex justify-content-center align-items-center">
                                 <i class="fa fa-heart-o mr-1"></i>
                                 <p>Add To Wishlist</p>
                             </button>
-                            <a class="share-on-facebook" href="https://www.facebook.com/sharer/sharer.php?u=ezsell.az"
-                                target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                                Share on Facebook
+                            <a class="share-on-facebook" href="https://www.facebook.com/sharer/sharer.php?u=ezsell.az" target="_blank">
+                                <i class="fab fa-facebook-f"></i> Share on Facebook
                             </a>
-                            <a class="share-on-twitter"
-                                href="https://twitter.com/intent/tweet?text=There%20are%20some%20things%20you%20can%E2%80%99t%20sell.%20For%20everything%20else%2C%20there%E2%80%99s%20EZSell!&url=http%3A%2F%2Fezsell.az&hashtags=selleasywithezsell%2Cezsell"
+                            <a class="share-on-twitter" href="https://twitter.com/intent/tweet?text=There%20are%20some%20things%20you%20can%E2%80%99t%20sell.%20For%20everything%20else%2C%20there%E2%80%99s%20EZSell!&url=http%3A%2F%2Fezsell.az&hashtags=selleasywithezsell%2Cezsell"
                                 target="_blank">
-                                <i class="fab fa-twitter"></i>
-                                Share on Twitter
+                                <i class="fab fa-twitter"></i> Share on Twitter
                             </a>
                         </div>
                     </div>
@@ -291,14 +359,8 @@
                 </div>
                 <div class="tab-content">
                     <div class="product-description hidden active-content">
-                        <p>Equipped with the new esports-grade optical sensor that has true 16,000 DPI and true tracking
-                            at 450 Inches Per
-                            Second (IPS), the Razer DeathAdder Elite gives you the absolute advantage of having the
-                            fastest sensor in the
-                            world. Engineered to redefine the standards of accuracy and speed, this incredible mouse
-                            sensor crushes the
-                            competition with a Resolution Accuracy of 99.4%, so you can land more killing blows with
-                            pinpoint precision.</p>
+                        <p>Equipped with the new esports-grade optical sensor that has true 16,000 DPI and true tracking at 450 Inches Per Second (IPS), the Razer DeathAdder Elite gives you the absolute advantage of having the fastest sensor in the world.
+                            Engineered to redefine the standards of accuracy and speed, this incredible mouse sensor crushes the competition with a Resolution Accuracy of 99.4%, so you can land more killing blows with pinpoint precision.</p>
                     </div>
                     <div class="product-dets hidden">
                         <div class="d-flex justify-content-center">
@@ -415,9 +477,8 @@
                                             </div>
                                         </div>
                                         <div class="review-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna
-                                                aliqua</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                            </p>
                                         </div>
                                     </li>
                                     <li>
@@ -433,9 +494,8 @@
                                             </div>
                                         </div>
                                         <div class="review-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna
-                                                aliqua</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                            </p>
                                         </div>
                                     </li>
                                     <li>
@@ -451,9 +511,8 @@
                                             </div>
                                         </div>
                                         <div class="review-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna
-                                                aliqua</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                            </p>
                                         </div>
                                     </li>
                                 </ul>
@@ -747,8 +806,7 @@
                         <h6>ABOUT US</h6>
                         <ul>
                             <li>
-                                <a href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455 "
-                                    target="_blank " class="d-flex ">
+                                <a href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455 " target="_blank " class="d-flex ">
                                     <i class="fas fa-map-marker-alt "></i>
                                     <p>Nizami küçəsi 203B</p>
                                 </a>
@@ -803,7 +861,7 @@
                                 <a href=" ">Orders and Returns</a>
                             </li>
                             <li>
-                                <a href=" ">Terms & Conditions</a>
+                                <a href="termsandconditions.html">Terms & Conditions</a>
                             </li>
                         </ul>
                     </div>
@@ -814,10 +872,10 @@
                                 <a href=" ">My Account</a>
                             </li>
                             <li>
-                                <a href=" ">View Cart</a>
+                                <a href="cart.html">View Cart</a>
                             </li>
                             <li>
-                                <a href=" ">Wishlist</a>
+                                <a href="wishlist.html">Wishlist</a>
                             </li>
                             <li>
                                 <a href=" ">Track My Order</a>
@@ -866,8 +924,7 @@
                         </li>
                     </ul>
                     <p>Copyright ©2020 All rights reserved | This web application is made by
-                        <a id="project-author " href="https://www.linkedin.com/in/imran-ahmadov-705039144/ " target="_blank"
-                            style="text-decoration:none"><span>Imran Ahmadov</span></a></p>
+                        <a id="project-author " href="https://www.linkedin.com/in/imran-ahmadov-705039144/ " target="_blank" style="text-decoration:none"><span>Imran Ahmadov</span></a></p>
                 </div>
             </div>
         </div>

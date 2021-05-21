@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -30,9 +29,7 @@
                             </div>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <a class="top-nav-link"
-                                    href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455"
-                                    target="_blank">Nizami küçəsi 203B</a>
+                                <a class="top-nav-link" href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455" target="_blank">Nizami küçəsi 203B</a>
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
@@ -53,7 +50,7 @@
                         </div>
                     </div>
                     <div class="create-ad-btn-div pt-2 pb-1 d-flex align-items-center col-10 col-lg-3">
-                        <a class="create-ad-btn d-flex align-items-center justify-content-center" href="#">
+                        <a class="create-ad-btn d-flex align-items-center justify-content-center" href="createad.html">
                             Create your ad
                         </a>
                     </div>
@@ -65,7 +62,7 @@
             <div class="container">
                 <div class="row">
                     <div class="d-flex align-items-center justify-content-lg-start justify-content-center col-lg-3">
-                        <a href="#"><img src="img/ez-sell-logo-xs.png" alt=""></a>
+                        <a href="index.html"><img src="img/ez-sell-logo-xs.png" alt=""></a>
                     </div>
                     <div class="d-flex align-items-center justify-content-center col-lg-6 main-search-bar">
                         <form class="search-items d-flex justify-content-center">
@@ -79,7 +76,7 @@
                         </form>
                     </div>
                     <div class="d-flex align-items-center justify-content-end col-lg-3" id="cart-and-wishlist">
-                        <a href="#">
+                        <a href="wishlist.html">
                             <div class="nav-side-btn" id="wishlist-btn">
                                 <div class="d-flex align-items-center justify-content-center wishlist-bar">
                                     <i class="far fa-heart"></i>
@@ -90,17 +87,102 @@
                                 <p>Your Wishlist</p>
                             </div>
                         </a>
-                        <a href="#">
-                            <div class="nav-side-btn" id="cart-btn">
-                                <div class="d-flex align-items-center justify-content-center cart-bar">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <div class="d-flex justify-content-center qty" id="cart-item-qty">
-                                        <p>0</p>
+                        <div class="nav-side-btn" id="cart-btn">
+                            <div class="d-flex align-items-center justify-content-center cart-bar">
+                                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                <div class="d-flex justify-content-center qty" id="cart-item-qty">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <p>Your Cart</p>
+                            <div class="dropdown-cart d-none">
+                                <div class="dropdown-body">
+                                    <div class="dropdown-list">
+                                        <div class="dropdown-product d-flex">
+                                            <div class="dd-item-img">
+                                                <div class="delete-item d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-times" aria-hidden="true"></i>
+                                                </div>
+                                                <img src="img/product01.png" alt="">
+                                            </div>
+                                            <div class="dd-item-info">
+                                                <a href="" class="dd-item-name">
+                                                    Product name goes here
+                                                </a>
+                                                <div class="dd-item-count d-flex align-items-baseline">
+                                                    <span class="item-qty">
+                                                        1x
+                                                    </span>
+                                                    <h4>
+                                                        $980.00
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-product d-flex">
+                                            <div class="dd-item-img">
+                                                <div class="delete-item d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-times" aria-hidden="true"></i>
+                                                </div>
+                                                <img src="img/product01.png" alt="">
+                                            </div>
+                                            <div class="dd-item-info">
+                                                <a href="" class="dd-item-name">
+                                                    Product name goes here
+                                                </a>
+                                                <div class="dd-item-count d-flex align-items-baseline">
+                                                    <span class="item-qty">
+                                                        1x
+                                                    </span>
+                                                    <h4>
+                                                        $980.00
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-product d-flex">
+                                            <div class="dd-item-img">
+                                                <div class="delete-item d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-times" aria-hidden="true"></i>
+                                                </div>
+                                                <img src="img/product01.png" alt="">
+                                            </div>
+                                            <div class="dd-item-info">
+                                                <a href="" class="dd-item-name">
+                                                    Product name goes here
+                                                </a>
+                                                <div class="dd-item-count d-flex align-items-baseline">
+                                                    <span class="item-qty">
+                                                        1x
+                                                    </span>
+                                                    <h4>
+                                                        $980.00
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="dropdown-summary">
+                                        <p><span>3</span> item(s) selected</p>
+                                        <h4>Subtotal: <span>$2940.00</span></h4>
                                     </div>
                                 </div>
-                                <p>Your Cart</p>
+                                <div class="dropdown-nav d-flex">
+                                    <a class="dropdown-link" href="cart.html">
+                                        <div>
+                                            View Cart
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-link" href="">
+                                        <div>
+                                            Checkout
+                                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </a>
+                        </div>
                         <div class="menu-toggle d-flex d-lg-none">
                             <a class="d-flex flex-column align-items-center" href="#">
                                 <i class="fa fa-bars"></i>
@@ -181,10 +263,8 @@
                                 <input type="checkbox" id="create-account">
                                 <span class="checkbox-text">Create Account?</span>
                                 <div class="caption pt-2">
-                                    <input class="input mb-3" type="password" name="password"
-                                        placeholder="Enter Your Password">
-                                    <input class="input mb-3" type="password" name="confirm-password"
-                                        placeholder="Confirm Your Password">
+                                    <input class="input mb-3" type="password" name="password" placeholder="Enter Your Password">
+                                    <input class="input mb-3" type="password" name="confirm-password" placeholder="Confirm Your Password">
                                     <input type="checkbox" id="show-password">
                                     <span class="checkbox-text">Show Password</span>
                                 </div>
@@ -271,9 +351,7 @@
                                 Direct Bank Transfer
                             </label>
                             <div class="caption">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et
-                                    dolore magna aliqua.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             </div>
                         </div>
                         <div class="input-radio">
@@ -282,9 +360,7 @@
                                 Cheque Payment
                             </label>
                             <div class="caption">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et
-                                    dolore magna aliqua.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             </div>
                         </div>
                         <div class="input-radio">
@@ -293,9 +369,7 @@
                                 Paypal System
                             </label>
                             <div class="caption">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et
-                                    dolore magna aliqua.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             </div>
                         </div>
                     </div>
@@ -362,8 +436,7 @@
                         <h6>ABOUT US</h6>
                         <ul>
                             <li>
-                                <a href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455 "
-                                    target="_blank " class="d-flex ">
+                                <a href="https://www.google.com/maps/place/Code+Academy/@40.377195,49.8517568,17z/data=!3m1!4b1!4m5!3m4!1s0x40307d079efb5163:0xc20aa51a5f0b5e01!8m2!3d40.3771909!4d49.8539455 " target="_blank " class="d-flex ">
                                     <i class="fas fa-map-marker-alt "></i>
                                     <p>Nizami küçəsi 203B</p>
                                 </a>
@@ -418,7 +491,7 @@
                                 <a href=" ">Orders and Returns</a>
                             </li>
                             <li>
-                                <a href=" ">Terms & Conditions</a>
+                                <a href="termsandconditions.html">Terms & Conditions</a>
                             </li>
                         </ul>
                     </div>
@@ -429,10 +502,10 @@
                                 <a href=" ">My Account</a>
                             </li>
                             <li>
-                                <a href=" ">View Cart</a>
+                                <a href="cart.html">View Cart</a>
                             </li>
                             <li>
-                                <a href=" ">Wishlist</a>
+                                <a href="wishlist.html">Wishlist</a>
                             </li>
                             <li>
                                 <a href=" ">Track My Order</a>
@@ -481,8 +554,7 @@
                         </li>
                     </ul>
                     <p>Copyright ©2020 All rights reserved | This web application is made by
-                        <a id="project-author " href="https://www.linkedin.com/in/imran-ahmadov-705039144/ " target="_blank"
-                            style="text-decoration:none"><span>Imran Ahmadov</span></a></p>
+                        <a id="project-author " href="https://www.linkedin.com/in/imran-ahmadov-705039144/ " target="_blank" style="text-decoration:none"><span>Imran Ahmadov</span></a></p>
                 </div>
             </div>
         </div>
